@@ -10,7 +10,7 @@ export class Trending extends Component {
   }
 
   // async componentDidMount(){
-  //   let url = "https://newsapi.org/v2/everything?q=instagram&from=2023-10-19&sortBy=publishedAt&apiKey=56ffe41ee72e43d8b567421f45546692"
+  //   let url = "https://newsapi.org/v2/everything?q=hindi&from=2023-10-30&sortBy=publishedAt&apiKey=56ffe41ee72e43d8b567421f45546692"
   //   let data = await fetch(url) ;
   //   let parsedData = await data.json() 
   //   // console.log(parsedData)
@@ -22,7 +22,7 @@ export class Trending extends Component {
   render() {
     return (
       <div>
-        <div className="mt-4 ml-4 mr-4 max-h-20">
+        <div className="mt-4 ml-4 mr-4 max-h-80">
           <div className="w-full max-w-md  bg-white border border-gray-200 rounded-lg shadow sm:pt-6 sm:px-4 dark:bg-gray-800 dark:border-gray-700">
             <div className="flex items-center justify-between mb-2">
               <h5 className="text-lg font-bold leading-none  text-gray-900 dark:text-white">

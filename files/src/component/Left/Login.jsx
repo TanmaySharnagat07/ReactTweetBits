@@ -15,7 +15,7 @@ const Login = (props) => {
                 className="ml-auto border-0 float-right text-2xl leading-none font-semibold outline-none focus:outline-none"
                 onClick={() => props.close(false)}
               >
-                <span className="text-red-400 h-6 w-6 text-2xl flex items-center outline-none focus:outline-none">
+                <span className="text-black-400 h-6 w-6 text-2xl flex items-center outline-none focus:outline-none hover:text-red-600">
                   x
                 </span>
               </button>

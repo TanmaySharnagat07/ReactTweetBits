@@ -23,7 +23,7 @@ export class TrendSection extends Component {
                 {Posts}
               </p>
             </div>
-            <a href={NewsUrl} target="_blank" className="inline-flex items-center justify-center h-6 w-6 rounded-full text-base font-semibold
+            <a href={NewsUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center h-6 w-6 rounded-full text-base font-semibold
              text-gray-900 dark:text-white cursor-pointer  hover:bg-yellow-400 hover:text-white focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:bg-yellow-200 dark:hover:bg-yellow-200 dark:focus:ring-yellow-500" >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

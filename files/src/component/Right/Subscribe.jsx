@@ -6,11 +6,11 @@ const Subscribe = () => {
     
     <div className="mt-[72px] ml-4 mr-4 h-42 relative -z-10">
       <div className="max-w-sm p-4 bg-white border border-gray-200 rounded-2xl shadow dark:bg-gray-800 dark:border-gray-700">
-        <a href="#">
+        <div >
           <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
             Unlock Premium
           </h5>
-        </a>
+        </div>
         <p className="mb-3 font-medium text-gray-700 dark:text-gray-400">
         Subscribe to unlock new features and if eligible, receive a share of ads revenue.
         </p>
