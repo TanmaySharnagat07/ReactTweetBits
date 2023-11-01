@@ -11,10 +11,7 @@ const Sidebar = () => {
     <div className="fixed z-20">
       {/* BIG SCREEN */}
       <div className="flex flex-col items-center w-72 h-screen overflow-hidden text-gray-700 rounded border-r border-gray z-20 max-lg:hidden ">
-        <a
-          className="flex pl-8 items-center w-full mt-3 h-16 border-b border-gray-300"
-          href="#"
-        >
+        <div className="flex pl-8 items-center w-full mt-3 h-16 border-b border-gray-300">
           {/* LOGO */}
           <span className="text-sm font-bold">
             <img
@@ -23,59 +20,59 @@ const Sidebar = () => {
               alt="TweetBits"
             />
           </span>
-        </a>
+        </div>
         <div className="w-full px-2 pl-8">
           <ul className="flex flex-col items-center w-full mt-3">
             <li className="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-100">
-              <svg
-                className="w-6 h-6 stroke-current"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                />
-              </svg>
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  `ml-2 text-lg font-medium ${
+                  `text-lg font-medium ${
                     isActive ? "text-yellow-500" : "text-gray-700"
-                  } duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-yellow-600 lg:p-0`
+                  } duration-200 flex gap-2 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-yellow-600 lg:p-0`
                 }
               >
-                Home
+                <svg
+                  className="w-6 h-6 stroke-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  />
+                </svg>
+                <p>Home</p>
               </NavLink>
             </li>
             <li className="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-100">
-              <svg
-                className="w-6 h-6 stroke-current"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
               <NavLink
                 to="/search"
                 className={({ isActive }) =>
-                  `ml-2 text-lg font-medium ${
+                  `text-lg font-medium ${
                     isActive ? "text-yellow-500" : "text-gray-700"
-                  } duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-yellow-600 lg:p-0`
+                  } duration-200 flex gap-2 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-yellow-600 lg:p-0`
                 }
               >
-                Search
+                <svg
+                  className="w-6 h-6 stroke-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+                <p>Search</p>
               </NavLink>
             </li>
             <li
@@ -98,39 +95,35 @@ const Sidebar = () => {
             {showSub ? <PriceCard exit={setShowSub} var={showSub} /> : null}
           </ul>
           <ul className="flex flex-col items-center w-full mt-2 ">
-            <li
-              className="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-100"
-            >
-              <svg
-                className="w-6 h-6 stroke-current"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-                />
-              </svg>
+            <li className="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-100">
               <NavLink
-                to="/setting"
+                to="/profile"
                 className={({ isActive }) =>
-                  `ml-2 text-lg font-medium ${
+                  `text-lg font-medium ${
                     isActive ? "text-yellow-500" : "text-gray-700"
-                  } duration-200 border-b border-gray-100 hover:bg-gray-50 
+                  } duration-200 flex gap-2 border-b border-gray-100 hover:bg-gray-50 
               lg:hover:bg-transparent lg:border-0 hover:text-yellow-600 lg:p-0`
                 }
               >
-                Settings
+                {" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="w-6 h-6 stroke-current"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                  />
+                </svg>
+                <p>Profile</p>
               </NavLink>
             </li>
-            <a
-              className="relative flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-100"
-              href="#"
-            >
+            <div className="relative flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-100">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -147,7 +140,7 @@ const Sidebar = () => {
               </svg>
               <span className="ml-2 text-lg font-medium">More</span>
               {/* <span className="absolute top-0 left-0 w-2 h-2 mt-2 ml-2 bg-indigo-500 rounded-full"></span> */}
-            </a>
+            </div>
             <div className="mt-32 w-full z-0">
               <button
                 type="button"
@@ -194,61 +187,69 @@ const Sidebar = () => {
 
       {/* SMALL SCREEN */}
       <div className="flex flex-col items-center w-16 h-screen border-r border-gray overflow-hidden text-gray-700 rounded min-[1024px]:hidden ">
-        <a
-          className="flex items-center justify-center mt-3 h-16 ml-2 border-b border-gray-300"
-          href="#"
-        >
+        <div className="flex items-center justify-center mt-3 h-16 ml-2 border-b border-gray-300">
           <img
             src="\src\component\Left\logo1.png"
             className="h-full w-full mr-3 object-fit mb-3"
             alt="TweetBits"
           />
-        </a>
+        </div>
         <div className="flex flex-col items-center mt-3 ">
           {/* Home */}
-          <a
-            className="flex items-center justify-center w-12 h-12 mt-2 rounded hover:bg-gray-300"
-            href="#"
-          >
-            <svg
-              className="w-6 h-6 stroke-current"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          <div className="flex items-center justify-center w-12 h-12 mt-2 rounded hover:bg-gray-300">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `text-lg font-medium ${
+                  isActive ? "text-yellow-500" : "text-gray-700"
+                } duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-yellow-600 lg:p-0`
+              }
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-              />
-            </svg>
-          </a>
+              <svg
+                className="w-6 h-6 stroke-current"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                />
+              </svg>
+            </NavLink>
+          </div>
           {/* Search */}
-          <a
-            className="flex items-center justify-center w-12 h-12 mt-2 rounded hover:bg-gray-300"
-            href="#"
-          >
-            <svg
-              className="w-6 h-6 stroke-current"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          <div className="flex items-center justify-center w-12 h-12 mt-2 rounded hover:bg-gray-300">
+            <NavLink
+              to="/search"
+              className={({ isActive }) =>
+                `text-lg font-medium ${
+                  isActive ? "text-yellow-500" : "text-gray-700"
+                } duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-yellow-600 lg:p-0`
+              }
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-          </a>
+              <svg
+                className="w-6 h-6 stroke-current"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </NavLink>
+          </div>
           {/* Premium */}
-          <a
+          <div
             className="flex items-center justify-center w-12 h-12 mt-2 rounded"
-            href="#"
             onClick={() => {
               setShowSub(true);
             }}
@@ -262,34 +263,37 @@ const Sidebar = () => {
               <path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z" />
               <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z" />
             </svg>
-          </a>
+          </div>
           {showSub ? <PriceCard exit={setShowSub} var={showSub} /> : null}
         </div>
         {/*  */}
         <div className="flex flex-col items-center mt-2 ">
-          <a
-            className="flex items-center justify-center w-12 h-12 mt-2 rounded hover:bg-gray-300"
-            href="#"
-          >
-            <svg
-              className="w-6 h-6 stroke-current"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          <div className="flex items-center justify-center w-12 h-12 mt-2 rounded hover:bg-gray-300">
+            <NavLink
+              to="/profile"
+              className={({ isActive }) =>
+                `text-lg font-medium ${
+                  isActive ? "text-yellow-500" : "text-gray-700"
+                } duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-yellow-600 lg:p-0`
+              }
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-              />
-            </svg>
-          </a>
-          <a
-            className="relative flex items-center justify-center w-12 h-12 mt-2 hover:bg-gray-300"
-            href="#"
-          >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-6 h-6 stroke-current"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                />
+              </svg>
+            </NavLink>
+          </div>
+          <div className="relative flex items-center justify-center w-12 h-12 mt-2 hover:bg-gray-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -304,7 +308,7 @@ const Sidebar = () => {
                 d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-          </a>
+          </div>
           {/* Post */}
           <div className="mt-32 ml-4">
             <button
