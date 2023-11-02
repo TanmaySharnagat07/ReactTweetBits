@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Edit from "./Edit";
+import TweetCard from "../Home/TweetCard";
 
 const ProfilePage = () => {
   const [edit, setedit] = useState(false);
@@ -7,8 +8,8 @@ const ProfilePage = () => {
   return (
     <>
       <div className="flex-col w-[800px] h-screen ml-72 border-r border-gray-200 max-lg:ml-16  max-lg:mr-5 max-md:pr-5">
-        <div className="h-16 flex fixed w-[50rem] bg-white">
-          <div className="pt-6 pl-4 font-bold hover:font-black ">
+        <div className="h-14 flex fixed w-[50rem] bg-white">
+          <div className="pt-6 pl-4 font-bold hover:font-black">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -25,11 +26,11 @@ const ProfilePage = () => {
           </div>
           <div className="pt-1 pl-10 flex flex-col">
             <span className="text-xl font-semibold">Username</span>
-            <span>{Math.ceil(Math.random() * 10)} Posts</span>
+            <span className="text-sm">{Math.ceil(Math.random() * 10)} Posts</span>
           </div>
         </div>
-        <div className="h-64 bg-gradient-to-r from-yellow-500 to-pink-500"></div>
-        <div className="h-48 ml-4">
+        <div className="h-60 bg-gradient-to-r from-yellow-500 to-pink-500"></div>
+        <div className="h-[180px] ml-4">
           <img
             src="https://wallpapers.com/images/high/cool-profile-picture-gdhlf31a1n7pcctk.webp"
             alt="profile"
@@ -37,7 +38,7 @@ const ProfilePage = () => {
           />
           <div className="ml-[680px] mr-5 -mt-[88px] max-md:mr-5">
             <button
-              className="bg-gradient-to-t  from-yellow-500 to-pink-500 text-white w-24 h-10 flex justify-center items-center font-semibold rounded-full"
+              className="hover:bg-gradient-to-t from-yellow-500 to-pink-500 hover:text-white hover:border-0 w-24 h-10 flex justify-center border border-slate-700 items-center font-semibold rounded-full"
               onClick={() => {
                 setedit(true);
               }}
@@ -73,6 +74,24 @@ const ProfilePage = () => {
             </span>
           </div>
         </div>
+        <div className="mt-4 flex h-12 border-b border-gray-200 max-sm:gap-5 cursor-pointer">
+          <div className="flex justify-center items-center w-[20%] hover:bg-gray-300">
+            <button className="">Posts</button>
+          </div>
+          <div className="flex justify-center items-center w-[20%] hover:bg-gray-300">
+            <button>Replies</button>
+          </div>
+          <div className="flex justify-center items-center w-[25%] hover:bg-gray-300">
+            <button>Highlights</button>
+          </div>
+          <div className="flex justify-center items-center w-[15%] hover:bg-gray-300">
+            <button>Media</button>
+          </div>
+          <div className="flex justify-center items-center w-[20%] hover:bg-gray-300">
+            <button className="pr-2">Likes</button>
+          </div>
+        </div>
+        <TweetCard/>
       </div>
     </>
   );

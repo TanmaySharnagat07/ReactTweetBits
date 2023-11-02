@@ -15,7 +15,7 @@ const Sidebar = () => {
           {/* LOGO */}
           <span className="text-sm font-bold">
             <img
-              src="\src\components\Left\logo.png"
+              src="files\src\component\Left\TOp.png"
               className="h-11 mr-3 object-fit mb-3"
               alt="TweetBits"
             />
@@ -76,7 +76,7 @@ const Sidebar = () => {
               </NavLink>
             </li>
             <li
-              className="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-100 cursor-pointer"
+              className="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-100 cursor-pointer hover:text-yellow-500"
               onClick={() => {
                 setShowSub(true);
               }}
@@ -90,7 +90,7 @@ const Sidebar = () => {
                 <path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z" />
                 <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z" />
               </svg>
-              <span className="ml-2 text-lg font-medium">Premium</span>
+              <span className="ml-2 text-lg font-medium ">Premium</span>
             </li>
             {showSub ? <PriceCard exit={setShowSub} var={showSub} /> : null}
           </ul>
@@ -138,7 +138,7 @@ const Sidebar = () => {
                   d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <span className="ml-2 text-lg font-medium">More</span>
+              <button className="ml-2 text-lg font-medium">More</button>
               {/* <span className="absolute top-0 left-0 w-2 h-2 mt-2 ml-2 bg-indigo-500 rounded-full"></span> */}
             </div>
             <div className="mt-32 w-full z-0">

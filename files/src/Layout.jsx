@@ -1,7 +1,6 @@
 import React from "react";
 import Sidebar from "./component/Left/SideBar"
 import RightNav from "./component/Right/RightNav"
-// import Contents from "./component/Center/Contents";
 import { Outlet } from "react-router";
 
 const Layout = () => {

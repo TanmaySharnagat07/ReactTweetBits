@@ -2,7 +2,7 @@ import React from "react";
 
 const TweetCard = () => {
   return (
-    <div className="mt-[76px] ">
+    <div>
       <div className="bg-gray-50 dark:bg-black p-10 flex items-center justify-center">
         <div className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-800 p-4 rounded-xl border max-w-xl">
           <div className="flex justify-between">

@@ -4,7 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 import Layout from './Layout';
-import Contents from './component/Center/Contents';
+import Contents from './component/Center/Home/Contents';
 import Search from './component/Center/Search';
 import Settings from './component/Center/ProfileSection/ProfilePage';
 

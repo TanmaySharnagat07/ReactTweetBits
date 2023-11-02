@@ -9,15 +9,15 @@ export class Search extends Component {
     }
   }
 
-  async componentDidMount(){
-    let url = "https://newsapi.org/v2/everything?q=hindi&from=2023-10-30&sortBy=publishedAt&apiKey=56ffe41ee72e43d8b567421f45546692"
-    let data = await fetch(url) ;
-    let parsedData = await data.json() 
-    // console.log(parsedData)
-    this.setState ({
-        articles:parsedData.articles
-    })
-  }
+  // async componentDidMount(){
+  //   let url = "https://newsapi.org/v2/everything?q=hindi&from=2023-10-30&sortBy=publishedAt&apiKey=56ffe41ee72e43d8b567421f45546692"
+  //   let data = await fetch(url) ;
+  //   let parsedData = await data.json() 
+  //   // console.log(parsedData)
+  //   this.setState ({
+  //       articles:parsedData.articles
+  //   })
+  // }
   render() {
     return (
       <>
